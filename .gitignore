@@ -1,0 +1,32 @@
+# Python virtual environment
+venv/
+
+# Project documentation
+Project Docs/
+
+# Zip files folder
+zip files/
+
+# Cache
+__pycache__/
+*.pyc
+
+# Node modules
+node_modules/
+
+# Zip files
+*.zip
+
+# ML / model files
+*.pkl
+*.joblib
+*.h5
+
+# Dataset files
+*.csv
+
+# Logs
+*.log
+
+# Mac files
+.DS_Store

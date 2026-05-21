@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ChatShield AI</title>
+    <link rel="stylesheet" href="./popup.css">
+    <script src="./popup.js"></script>
+</head>
+<body>
+
+    <div id="trigger-page">
+
+        <h1>ChatShield AI</h1>
+        <h2>Monitoring Chats</h2>
+
+        <div class="btn-container">
+            <button id="start">Start Reading Messages</button>
+            <button id="stop">Stop Reading Messages</button>
+        </div>
+
+        <p id="status">Status: Not Started</p> 
+
+        <!-- 🔥 VERDICT UI -->
+        <div id="verdictBox" class="verdict-card">
+
+            <h3>Is it safe to chat?</h3>
+
+            <div id="confidence" class="confidence">
+                Processing...
+            </div>
+
+            <!-- 🔥 CIRCULAR GAUGE -->
+            <div class="gauge-container">
+                <svg width="130" height="130" viewBox="0 0 120 120">
+
+                    <!-- Background -->
+                    <circle cx="60" cy="60" r="50"
+                        class="gauge-bg" />
+
+                    <!-- Progress -->
+                    <circle id="gauge"
+                        cx="60" cy="60" r="50"
+                        class="gauge-progress" />
+
+                </svg>
+            </div>
+
+            <div id="finalVerdict" class="final-text"></div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

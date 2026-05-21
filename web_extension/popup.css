@@ -1,0 +1,185 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    width: 320px;
+    min-height: 300px;
+
+    /* 🔥 Premium dark background */
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    box-shadow: inset 0 0 50px rgba(0, 255, 150, 0.1);
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* 🔥 Main container */
+#trigger-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+    animation: slideUp 0.6s ease;
+}
+
+/* Headings */
+h1 {
+    margin: 5px 0;
+}
+
+h2 {
+    margin: 0 0 15px;
+}
+
+/* Buttons */
+button {
+    padding: 12px;
+    font-size: 14px;
+    color: #fff;
+    background: linear-gradient(135deg, #ff5722, #ff7043);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Button container */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* ✅ FIXED BUTTON SIZE (no overflow) */
+.btn-container button {
+    width: 90%;
+    max-width: 260px;
+    text-align: center;
+}
+
+/* Hover */
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff7043, #ff8a65);
+}
+
+/* Click */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Status */
+#status {
+    font-size: 13px;
+    color: #ffd54f;
+    margin-top: 12px;
+    font-weight: bold;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* 🔥 VERDICT CARD (GLASS + ANIMATION READY) */
+.verdict-card {
+    display: none;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+
+    transform: scale(0.8);
+    opacity: 0;
+    transition: all 0.4s ease;
+
+    text-align: center;
+}
+
+/* Confidence */
+.confidence {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Gauge */
+.gauge-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.gauge-bg {
+    stroke: #ffffff33;
+    stroke-width: 10;
+    fill: none;
+}
+
+.gauge-progress {
+    stroke: red;
+    stroke-width: 10;
+    fill: none;
+    stroke-linecap: round;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+/* Final text */
+.final-text {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* 🔥 GLOW ANIMATION */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    50% {
+        box-shadow: 0 0 25px var(--glow-color);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+}
+
+.glow-animate {
+    animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

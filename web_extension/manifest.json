@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "Project-Protect",
+    "version": "1.0",
+    "description": "Social Engineering detection in your chats.",
+
+    "icons": {
+        "48": "icons/project-icon.png"
+    },
+
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs",
+        "scripting"
+    ],
+
+    "host_permissions": [
+        "http://*/*"
+    ],
+
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/socEng.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "http://127.0.0.1:8000/*",
+                "http://localhost:8000/*"
+            ],
+            "js": ["content.js"]
+        }
+    ]
+}

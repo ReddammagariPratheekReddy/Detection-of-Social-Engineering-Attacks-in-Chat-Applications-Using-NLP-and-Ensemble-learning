@@ -1,0 +1,6 @@
+Page not found (404)
+No ChatGroup matches the given query.
+Request Method: GET
+Request URL: http://127.0.0.1:8000/chat/room/localhost:8000
+Raised by: realtime_chatter.views.chat_view
+You’re seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.
